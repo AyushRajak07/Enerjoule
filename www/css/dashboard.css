@@ -1,0 +1,73 @@
+.hero-card {
+  background: linear-gradient(180deg, var(--bg-elevated) 0%, var(--bg-elevated) 100%);
+  border-radius: var(--r-lg);
+  box-shadow: var(--shadow-2);
+  padding: 26px;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: var(--gap);
+}
+@media (max-width: 900px) { .hero-card { grid-template-columns: 1fr; } }
+
+.hero-left .eyebrow { font-size: 12.5px; font-weight: 700; color: var(--ink-soft); }
+.hero-left .power-num { font-size: 52px; font-weight: 800; letter-spacing: var(--tracking-tight); line-height: 1; margin-top: 8px; }
+.hero-left .power-num small { font-size: 22px; font-weight: 700; color: var(--ink-soft); margin-left: 4px; }
+.hero-left .power-sub { font-size: 13px; color: var(--ink-soft); margin-top: 8px; }
+.hero-stats { display: flex; gap: 26px; margin-top: 22px; flex-wrap: wrap; }
+.hero-stats .s .l { font-size: 11.5px; color: var(--ink-faint); font-weight: 600; }
+.hero-stats .s .v { font-size: 17px; font-weight: 700; margin-top: 3px; }
+
+.flow-visual {
+  position: relative;
+  height: 270px;
+  border-radius: var(--r-md);
+  background: var(--bg-sunken);
+  overflow: hidden;
+}
+.flow-visual .icon-wrap {
+  width: 38px; height: 38px;
+  border-radius: var(--r-sm);
+  display: flex; align-items: center; justify-content: center;
+}
+.flow-visual .icon-wrap svg { width: 20px; height: 20px; }
+.flow-dot { fill: var(--accent); }
+
+.chart-card { margin-top: var(--gap); }
+.chart-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 10px; }
+.chart-wrap { position: relative; height: 220px; }
+.chart-wrap canvas { width: 100%; height: 100%; }
+.chart-legend { display: flex; gap: 18px; margin-top: 10px; font-size: 12px; color: var(--ink-soft); }
+.chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
+.chart-legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+
+.solar-flow-label {
+  font-size: 10.5px; font-weight: 700; color: var(--ink-soft); letter-spacing: 0.02em;
+}
+
+.flow-line {
+  position: relative;
+  width: 2px;
+  flex: 1 1 0;
+  min-height: 18px;
+  background: var(--line);
+  margin: 2px 0;
+  overflow: hidden;
+  border-radius: 2px;
+}
+.flow-line::after {
+  content: "";
+  position: absolute;
+  left: -3px;
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  top: -10px;
+  animation: flow-down 1.8s linear infinite;
+}
+.flow-line + div + .flow-line::after { animation-delay: 0.6s; }
+@keyframes flow-down {
+  from { top: -10px; }
+  to { top: 100%; }
+}

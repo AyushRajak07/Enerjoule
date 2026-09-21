@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>Smart Energy — Home &amp; Board Monitor</title>
+<meta name="description" content="Offline-first smart energy, smart home and electrical board monitoring dashboard." />
+<meta name="theme-color" content="#F6F4EE" />
+<link rel="manifest" href="manifest.json" />
+<link rel="icon" href="assets/icons/icon-192.png" type="image/png" />
+<link rel="apple-touch-icon" href="assets/icons/icon-192.png" />
+
+<script>
+  // Apply saved theme before first paint (prevents a light flash in dark mode).
+  (function () {
+    try {
+      var s = JSON.parse(localStorage.getItem("se_settings") || "{}");
+      var t = s.theme || "system";
+      var dark = t === "dark" || (t === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+      document.documentElement.setAttribute("data-theme", dark ? "dark" : "light");
+    } catch (e) {}
+  })();
+</script>
+<link rel="stylesheet" href="css/reset.css" />
+<link rel="stylesheet" href="css/variables.css" />
+<link rel="stylesheet" href="css/layout.css" />
+<link rel="stylesheet" href="css/components.css" />
+<link rel="stylesheet" href="css/dashboard.css" />
+<link rel="stylesheet" href="css/devices.css" />
+<link rel="stylesheet" href="css/boards.css" />
+<link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+
+<div class="offline-banner" id="offline-banner">
+  <span class="dot"></span> Offline Mode — all locally available controls and history remain fully usable.
+</div>
+
+<div class="app-shell">
+  <aside class="sidebar" aria-label="Primary navigation">
+    <div class="sidebar-brand">
+      <svg class="mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="40" height="40" rx="12" fill="#F5A623"/>
+        <path d="M22 8 12 22h7l-1 10 10-14h-7z" fill="#1E1B16"/>
+      </svg>
+      <div class="word">Smart<span>Energy</span></div>
+    </div>
+    <nav class="sidebar-nav" id="sidebar-nav" aria-label="Sections"></nav>
+    <div class="sidebar-foot">Runs fully offline once installed.<br />No cloud, no backend.</div>
+  </aside>
+
+  <div class="main-col">
+    <header class="topbar">
+      <div>
+        <div class="topbar-greeting"><span id="greeting-text">Good Morning</span> · <span id="date-text"></span></div>
+        <div class="topbar-title" id="topbar-title">Overview</div>
+      </div>
+      <div class="topbar-actions">
+        <span class="status-chip muted" id="ble-chip">Bluetooth Disconnected</span>
+        <span class="status-chip" id="online-chip">Online</span>
+        <button class="icon-btn" id="bell-btn" aria-label="Activity notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg>
+        </button>
+        <button class="icon-btn" id="gear-btn" aria-label="Settings">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M19.4 13.5a7.6 7.6 0 0 0 0-3l2-1.4-2-3.4-2.3.7a7.6 7.6 0 0 0-2.6-1.5L14 2h-4l-.5 2.4a7.6 7.6 0 0 0-2.6 1.5l-2.3-.7-2 3.4 2 1.4a7.6 7.6 0 0 0 0 3l-2 1.4 2 3.4 2.3-.7a7.6 7.6 0 0 0 2.6 1.5L10 22h4l.5-2.4a7.6 7.6 0 0 0 2.6-1.5l2.3.7 2-3.4-2-1.4Z"/></svg>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="view" id="view-home"></section>
+      <section class="view" id="view-devices" hidden></section>
+      <section class="view" id="view-energy" hidden></section>
+      <section class="view" id="view-boards" hidden></section>
+      <section class="view" id="view-activity" hidden></section>
+      <section class="view" id="view-settings" hidden></section>
+    </main>
+  </div>
+</div>
+
+<nav class="bottom-nav" aria-label="Primary navigation">
+  <ul id="bottom-nav-list"></ul>
+</nav>
+
+<script src="capacitor.js"></script>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

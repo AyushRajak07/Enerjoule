@@ -1,0 +1,18 @@
+{
+  "appId": "com.smartenergy.app",
+  "appName": "Smart Energy",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "BluetoothLe": {
+      "displayStrings": {
+        "scanning": "Scanning for boards…",
+        "cancel": "Cancel",
+        "availableDevices": "Available devices",
+        "noDeviceFound": "No devices found"
+      }
+    }
+  }
+}

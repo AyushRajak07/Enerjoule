@@ -1,0 +1,14 @@
+{
+  "theme": "system",
+  "demoMode": true,
+  "bluetooth": {
+    "deviceName": "SmartBoard-BLE",
+    "serviceUUID": "0000FFE0-0000-1000-8000-00805F9B34FB",
+    "characteristicUUID": "0000FFE1-0000-1000-8000-00805F9B34FB"
+  },
+  "energy": {
+    "baseVoltage": 230,
+    "voltageJitter": 6,
+    "todayEnergyStart": 8.42
+  }
+}

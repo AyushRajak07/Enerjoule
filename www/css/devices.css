@@ -1,0 +1,4 @@
+.location-group { margin-bottom: 28px; }
+.location-group h2 { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+.device-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
+@media (max-width: 600px) { .device-grid { grid-template-columns: repeat(2, 1fr); } }

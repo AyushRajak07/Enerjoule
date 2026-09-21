@@ -1,0 +1,8 @@
+[
+  { "id": "BOARD_1", "name": "Board 1", "online": true, "voltage": 230.5, "power": 0, "energy": 1.245, "lastUpdate": 0 },
+  { "id": "BOARD_2", "name": "Board 2", "online": true, "voltage": 231.2, "power": 0, "energy": 2.310, "lastUpdate": 0 },
+  { "id": "BOARD_3", "name": "Board 3", "online": true, "voltage": 229.8, "power": 0, "energy": 0.980, "lastUpdate": 0 },
+  { "id": "BOARD_4", "name": "Board 4", "online": true, "voltage": 230.1, "power": 0, "energy": 0.540, "lastUpdate": 0 },
+  { "id": "BOARD_5", "name": "Board 5", "online": true, "voltage": 228.9, "power": 0, "energy": 0.760, "lastUpdate": 0 },
+  { "id": "BOARD_6", "name": "Board 6", "online": false, "voltage": 0, "power": 0, "energy": 0.410, "lastUpdate": 0 }
+]

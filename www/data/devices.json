@@ -1,0 +1,26 @@
+[
+  { "id": "dev_main_light", "name": "Main Light", "type": "light", "location": "Home", "boardId": "BOARD_1", "switchId": "Switch_1", "state": true, "power": 12, "icon": "light" },
+  { "id": "dev_socket_1", "name": "Socket 1", "type": "socket", "location": "Home", "boardId": "BOARD_1", "switchId": "Switch_2", "state": false, "power": 65, "icon": "socket" },
+  { "id": "dev_socket_2", "name": "Socket 2", "type": "socket", "location": "Home", "boardId": "BOARD_1", "switchId": "Switch_3", "state": true, "power": 40, "icon": "socket" },
+  { "id": "dev_fan", "name": "Fan", "type": "fan", "location": "Home", "boardId": "BOARD_1", "switchId": "Switch_4", "state": true, "speed": 2, "power": 78, "icon": "fan" },
+  { "id": "dev_ac", "name": "AC", "type": "ac", "location": "Home", "boardId": "BOARD_2", "switchId": "Switch_1", "state": true, "temperature": 25, "power": 1450, "icon": "ac" },
+  { "id": "dev_curtain", "name": "Curtain", "type": "curtain", "location": "Home", "boardId": "BOARD_2", "switchId": "Switch_2", "state": "CLOSED", "power": 0, "icon": "curtain" },
+  { "id": "dev_wifi_cam", "name": "WiFi & CAM", "type": "other", "location": "Home", "boardId": "BOARD_2", "switchId": "Switch_3", "state": true, "power": 14, "icon": "wifi" },
+
+  { "id": "dev_cabin_light", "name": "Cabin Light", "type": "light", "location": "Director's Cabin", "boardId": "BOARD_3", "switchId": "Switch_1", "state": true, "power": 12, "icon": "light" },
+  { "id": "dev_b1_socket1", "name": "Board 1 Socket 1", "type": "socket", "location": "Director's Cabin", "boardId": "BOARD_1", "switchId": "Switch_5", "state": false, "power": 55, "icon": "socket" },
+  { "id": "dev_b1_socket2", "name": "Board 1 Socket 2", "type": "socket", "location": "Director's Cabin", "boardId": "BOARD_1", "switchId": "Switch_6", "state": false, "power": 55, "icon": "socket" },
+  { "id": "dev_air_blower", "name": "Air Blower", "type": "socket", "location": "Director's Cabin", "boardId": "BOARD_3", "switchId": "Switch_2", "state": false, "power": 220, "icon": "blower" },
+
+  { "id": "dev_light_1", "name": "Light 1", "type": "light", "location": "Reception", "boardId": "BOARD_3", "switchId": "Switch_3", "state": true, "power": 10, "icon": "light" },
+  { "id": "dev_balcony_light", "name": "Balcony Light", "type": "light", "location": "Reception", "boardId": "BOARD_3", "switchId": "Switch_4", "state": false, "power": 10, "icon": "light" },
+  { "id": "dev_tubelight", "name": "Tubelight", "type": "light", "location": "Reception", "boardId": "BOARD_4", "switchId": "Switch_1", "state": true, "power": 20, "icon": "light" },
+  { "id": "dev_b3_socket", "name": "Board 3 Socket", "type": "socket", "location": "Reception", "boardId": "BOARD_3", "switchId": "Switch_5", "state": false, "power": 60, "icon": "socket" },
+  { "id": "dev_exhaust_fan", "name": "Exhaust Fan", "type": "fan", "location": "Reception", "boardId": "BOARD_4", "switchId": "Switch_2", "state": false, "speed": 0, "power": 45, "icon": "fan" },
+
+  { "id": "dev_inventory_light", "name": "Inventory Light", "type": "light", "location": "Lab", "boardId": "BOARD_5", "switchId": "Switch_1", "state": true, "power": 12, "icon": "light" },
+  { "id": "dev_workstation_light", "name": "Workstation Light", "type": "light", "location": "Lab", "boardId": "BOARD_5", "switchId": "Switch_2", "state": true, "power": 15, "icon": "light" },
+  { "id": "dev_soldering_1", "name": "Soldering Iron 1", "type": "socket", "location": "Lab", "boardId": "BOARD_6", "switchId": "Switch_1", "state": false, "power": 60, "icon": "iron" },
+  { "id": "dev_soldering_2", "name": "Soldering Iron 2", "type": "socket", "location": "Lab", "boardId": "BOARD_6", "switchId": "Switch_2", "state": false, "power": 60, "icon": "iron" },
+  { "id": "dev_hand_dryer", "name": "Hand Dryer", "type": "socket", "location": "Lab", "boardId": "BOARD_6", "switchId": "Switch_3", "state": false, "power": 1100, "icon": "dryer" }
+]

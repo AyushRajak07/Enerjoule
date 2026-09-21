@@ -1,0 +1,16 @@
+{
+  "name": "smart-energy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Smart Energy — Home & Board Monitor (offline-first PWA + Android app)",
+  "scripts": {
+    "sync": "npx cap sync android",
+    "serve": "python3 -m http.server 8080 --directory www"
+  },
+  "dependencies": {
+    "@capacitor/android": "^8.5.2",
+    "@capacitor/cli": "^8.5.2",
+    "@capacitor/core": "^8.5.2",
+    "@capacitor-community/bluetooth-le": "^8.3.0"
+  }
+}
