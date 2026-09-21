@@ -1,0 +1,13 @@
+@media (max-width: 640px) {
+  .hero-left .power-num { font-size: 40px; }
+  .metric .value { font-size: 22px; }
+  .view-head h1 { font-size: 19px; }
+  .board-stats { grid-template-columns: repeat(3, 1fr); }
+}
+
+/* Ensure no horizontal scroll anywhere */
+html, body { overflow-x: hidden; }
+.chart-wrap, .device-grid, .boards-grid { max-width: 100%; }
+
+/* Touch target guarantee */
+button, .toggle, .icon-btn, .nav-item, .chip { touch-action: manipulation; }
